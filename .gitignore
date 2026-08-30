@@ -1,0 +1,24 @@
+# Secrets — never commit this
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Odoo runtime data
+*.log
+filestore/
+sessions/
+
+# Build/debug artifacts
+build_log.txt
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
