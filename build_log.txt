@@ -1,0 +1,221 @@
+ Image my-odoo-odoo Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 495B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 802B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-slim
+#3 DONE 0.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.10-slim@sha256:38758a82a44d1acb9bae3dd5f7d2a55452fb44a5ceca7c4589f360f2c4aa3d0c
+#5 resolve docker.io/library/python:3.10-slim@sha256:38758a82a44d1acb9bae3dd5f7d2a55452fb44a5ceca7c4589f360f2c4aa3d0c 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 3.11MB 2.3s done
+#6 DONE 2.4s
+
+#7 [3/7] WORKDIR /opt/odoo
+#7 CACHED
+
+#8 [4/7] COPY odoo/ /opt/odoo/
+#8 CACHED
+
+#9 [5/7] COPY custom_addons/ /mnt/extra-addons/
+#9 CACHED
+
+#10 [2/7] RUN apt-get update && apt-get install -y     build-essential wget git     libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev     libssl-dev libjpeg-dev libpq-dev libffi-dev     node-less npm fonts-noto-cjk     && wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.bookworm_amd64.deb     && apt-get install -y ./wkhtmltox_0.12.6.1-3.bookworm_amd64.deb     && rm -rf /var/lib/apt/lists/* wkhtmltox_0.12.6.1-3.bookworm_amd64.deb
+#10 CACHED
+
+#11 [6/7] RUN pip install --no-cache-dir "cython<3" wheel
+#11 CACHED
+
+#12 [7/7] RUN pip install --no-cache-dir -r requirements.txt
+#12 0.453 Ignoring Babel: markers 'python_version >= "3.11" and python_version < "3.13"' don't match your environment
+#12 0.454 Ignoring Babel: markers 'python_version >= "3.13"' don't match your environment
+#12 0.454 Ignoring chardet: markers 'python_version >= "3.11"' don't match your environment
+#12 0.454 Ignoring cryptography: markers 'python_version >= "3.12"' don't match your environment
+#12 0.455 Ignoring decorator: markers 'python_version >= "3.11"' don't match your environment
+#12 0.456 Ignoring docutils: markers 'python_version >= "3.11"' don't match your environment
+#12 0.457 Ignoring freezegun: markers 'python_version >= "3.11" and python_version < "3.13"' don't match your environment
+#12 0.458 Ignoring freezegun: markers 'python_version >= "3.13"' don't match your environment
+#12 0.459 Ignoring gevent: markers 'sys_platform != "win32" and python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.459 Ignoring gevent: markers 'sys_platform != "win32" and python_version >= "3.12" and python_version < "3.13"' don't match your environment
+#12 0.460 Ignoring gevent: markers 'sys_platform != "win32" and python_version >= "3.13"' don't match your environment
+#12 0.460 Ignoring greenlet: markers 'sys_platform != "win32" and python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.460 Ignoring greenlet: markers 'sys_platform != "win32" and python_version >= "3.12" and python_version < "3.13"' don't match your environment
+#12 0.460 Ignoring greenlet: markers 'sys_platform != "win32" and python_version >= "3.13" and python_version < "3.14"' don't match your environment
+#12 0.460 Ignoring greenlet: markers 'sys_platform != "win32" and python_version >= "3.14"' don't match your environment
+#12 0.460 Ignoring idna: markers 'python_version >= "3.12"' don't match your environment
+#12 0.461 Ignoring Jinja2: markers 'python_version > "3.10"' don't match your environment
+#12 0.461 Ignoring libsass: markers 'python_version >= "3.11"' don't match your environment
+#12 0.461 Ignoring lxml: markers 'python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.461 Ignoring lxml: markers 'python_version >= "3.12" and python_version < "3.13"' don't match your environment
+#12 0.461 Ignoring lxml: markers 'python_version >= "3.13" and python_version < "3.14"' don't match your environment
+#12 0.462 Ignoring lxml: markers 'python_version >= "3.14"' don't match your environment
+#12 0.462 Ignoring lxml-html-clean: markers 'python_version >= "3.12"' don't match your environment
+#12 0.462 Ignoring MarkupSafe: markers 'python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.462 Ignoring MarkupSafe: markers 'python_version >= "3.12"' don't match your environment
+#12 0.463 Ignoring num2words: markers 'python_version >= "3.12"' don't match your environment
+#12 0.463 Ignoring Pillow: markers 'python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.463 Ignoring Pillow: markers 'python_version >= "3.12" and python_version < "3.13"' don't match your environment
+#12 0.464 Ignoring Pillow: markers 'python_version >= "3.13" and python_version < "3.14"' don't match your environment
+#12 0.464 Ignoring Pillow: markers 'python_version >= "3.14"' don't match your environment
+#12 0.464 Ignoring psutil: markers 'python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.465 Ignoring psutil: markers 'python_version >= "3.12"' don't match your environment
+#12 0.465 Ignoring psycopg2: markers 'python_version == "3.11"' don't match your environment
+#12 0.466 Ignoring psycopg2: markers 'python_version >= "3.12" and python_version < "3.13"' don't match your environment
+#12 0.467 Ignoring psycopg2: markers 'python_version >= "3.13"' don't match your environment
+#12 0.468 Ignoring pyopenssl: markers 'python_version >= "3.12"' don't match your environment
+#12 0.469 Ignoring PyPDF2: markers 'python_version > "3.10" and python_version < "3.13"' don't match your environment
+#12 0.469 Ignoring PyPDF: markers 'python_version >= "3.13"' don't match your environment
+#12 0.469 Ignoring pypiwin32: markers 'sys_platform == "win32"' don't match your environment
+#12 0.469 Ignoring python-dateutil: markers 'python_version >= "3.11"' don't match your environment
+#12 0.469 Ignoring python-ldap: markers 'sys_platform != "win32" and python_version >= "3.12"' don't match your environment
+#12 0.470 Ignoring python-stdnum: markers 'python_version >= "3.11" and python_version < "3.14"' don't match your environment
+#12 0.470 Ignoring python-stdnum: markers 'python_version >= "3.14"' don't match your environment
+#12 0.470 Ignoring qrcode: markers 'python_version >= "3.11"' don't match your environment
+#12 0.470 Ignoring reportlab: markers 'python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.471 Ignoring reportlab: markers 'python_version >= "3.12"' don't match your environment
+#12 0.471 Ignoring requests: markers 'python_version >= "3.11"' don't match your environment
+#12 0.471 Ignoring rjsmin: markers 'python_version >= "3.11"' don't match your environment
+#12 0.472 Ignoring rl-renderPM: markers 'sys_platform == "win32" and python_version >= "3.12"' don't match your environment
+#12 0.472 Ignoring urllib3: markers 'python_version >= "3.12"' don't match your environment
+#12 0.473 Ignoring vobject: markers 'python_version >= "3.14"' don't match your environment
+#12 0.473 Ignoring Werkzeug: markers 'python_version > "3.10" and python_version < "3.12"' don't match your environment
+#12 0.474 Ignoring Werkzeug: markers 'python_version >= "3.12"' don't match your environment
+#12 0.475 Ignoring xlrd: markers 'python_version >= "3.12"' don't match your environment
+#12 0.475 Ignoring XlsxWriter: markers 'python_version >= "3.12"' don't match your environment
+#12 0.475 Ignoring zeep: markers 'python_version >= "3.11" and python_version < "3.13"' don't match your environment
+#12 0.476 Ignoring zeep: markers 'python_version >= "3.13"' don't match your environment
+#12 0.809 Collecting Babel==2.9.1
+#12 1.097   Downloading Babel-2.9.1-py2.py3-none-any.whl (8.8 MB)
+#12 1.627      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 16.8 MB/s eta 0:00:00
+#12 1.802 Collecting chardet==4.0.0
+#12 1.912   Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+#12 2.296      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.7/178.7 kB 441.0 kB/s eta 0:00:00
+#12 2.810 Collecting cryptography==3.4.8
+#12 2.844   Downloading cryptography-3.4.8-cp36-abi3-manylinux_2_24_x86_64.whl (3.0 MB)
+#12 3.021      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 17.3 MB/s eta 0:00:00
+#12 3.060 Collecting decorator==4.4.2
+#12 3.088   Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
+#12 3.133 Collecting docutils==0.17
+#12 3.160   Downloading docutils-0.17-py2.py3-none-any.whl (575 kB)
+#12 3.187      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 575.1/575.1 kB 24.6 MB/s eta 0:00:00
+#12 3.231 Collecting ebaysdk==2.1.5
+#12 3.256   Downloading ebaysdk-2.1.5.tar.gz (42 kB)
+#12 3.259      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 39.6 MB/s eta 0:00:00
+#12 3.268   Preparing metadata (setup.py): started
+#12 3.504   Preparing metadata (setup.py): finished with status 'done'
+#12 3.540 Collecting freezegun==1.1.0
+#12 3.582   Downloading freezegun-1.1.0-py2.py3-none-any.whl (16 kB)
+#12 3.627 Collecting geoip2==2.9.0
+#12 3.668   Downloading geoip2-2.9.0-py2.py3-none-any.whl (18 kB)
+#12 3.879 Collecting gevent==21.8.0
+#12 3.906   Downloading gevent-21.8.0.tar.gz (6.2 MB)
+#12 4.182      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 22.5 MB/s eta 0:00:00
+#12 4.617   Installing build dependencies: started
+#12 8.675   Installing build dependencies: finished with status 'done'
+#12 8.676   Getting requirements to build wheel: started
+#12 10.22   Getting requirements to build wheel: finished with status 'error'
+#12 10.23   error: subprocess-exited-with-error
+#12 10.23   
+#12 10.23   × Getting requirements to build wheel did not run successfully.
+#12 10.23   │ exit code: 1
+#12 10.23   ╰─> [44 lines of output]
+#12 10.23       Compiling src/gevent/resolver/cares.pyx because it changed.
+#12 10.23       [1/1] Cythonizing src/gevent/resolver/cares.pyx
+#12 10.23       performance hint: src/gevent/libev/corecext.pyx:1325:0: Exception check on '_syserr_cb' will always require the GIL to be acquired.
+#12 10.23       Possible solutions:
+#12 10.23           1. Declare '_syserr_cb' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+#12 10.23           2. Use an 'int' return type on '_syserr_cb' to allow an error code to be returned.
+#12 10.23       
+#12 10.23       Error compiling Cython file:
+#12 10.23       ------------------------------------------------------------
+#12 10.23       ...
+#12 10.23       cdef tuple integer_types
+#12 10.23       
+#12 10.23       if sys.version_info[0] >= 3:
+#12 10.23           integer_types = int,
+#12 10.23       else:
+#12 10.23           integer_types = (int, long)
+#12 10.23                                 ^
+#12 10.23       ------------------------------------------------------------
+#12 10.23       src/gevent/libev/corecext.pyx:60:26: undeclared name not builtin: long
+#12 10.23       Compiling src/gevent/libev/corecext.pyx because it changed.
+#12 10.23       [1/1] Cythonizing src/gevent/libev/corecext.pyx
+#12 10.23       Traceback (most recent call last):
+#12 10.23         File "/usr/local/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+#12 10.23           main()
+#12 10.23         File "/usr/local/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+#12 10.23           json_out['return_val'] = hook(**hook_input['kwargs'])
+#12 10.23         File "/usr/local/lib/python3.10/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+#12 10.23           return hook(config_settings)
+#12 10.23         File "/tmp/pip-build-env-utt6igbo/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 333, in get_requires_for_build_wheel
+#12 10.23           return self._get_build_requires(config_settings, requirements=[])
+#12 10.23         File "/tmp/pip-build-env-utt6igbo/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+#12 10.23           self.run_setup()
+#12 10.23         File "/tmp/pip-build-env-utt6igbo/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 520, in run_setup
+#12 10.23           super().run_setup(setup_script=setup_script)
+#12 10.23         File "/tmp/pip-build-env-utt6igbo/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 317, in run_setup
+#12 10.23           exec(code, locals())  # noqa: S102 # exec is intentional here
+#12 10.23         File "<string>", line 50, in <module>
+#12 10.23         File "/tmp/pip-install-pcjie4fq/gevent_da14bd23eb5f4e0ea6c352135dd20490/_setuputils.py", line 237, in cythonize1
+#12 10.23           new_ext = cythonize(
+#12 10.23         File "/tmp/pip-build-env-utt6igbo/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1153, in cythonize
+#12 10.23           cythonize_one(*args)
+#12 10.23         File "/tmp/pip-build-env-utt6igbo/overlay/lib/python3.10/site-packages/Cython/Build/Dependencies.py", line 1264, in cythonize_one
+#12 10.23           raise CompileError(None, pyx_file)
+#12 10.23       Cython.Compiler.Errors.CompileError: src/gevent/libev/corecext.pyx
+#12 10.23       [end of output]
+#12 10.23   
+#12 10.23   note: This error originates from a subprocess, and is likely not a problem with pip.
+#12 10.23 error: subprocess-exited-with-error
+#12 10.23 
+#12 10.23 × Getting requirements to build wheel did not run successfully.
+#12 10.23 │ exit code: 1
+#12 10.23 ╰─> See above for output.
+#12 10.23 
+#12 10.23 note: This error originates from a subprocess, and is likely not a problem with pip.
+#12 10.37 
+#12 10.37 [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+#12 10.37 [notice] To update, run: pip install --upgrade pip
+#12 ERROR: process "/bin/sh -c pip install --no-cache-dir -r requirements.txt" did not complete successfully: exit code: 1
+------
+ > [7/7] RUN pip install --no-cache-dir -r requirements.txt:
+10.23 error: subprocess-exited-with-error
+10.23 
+10.23 × Getting requirements to build wheel did not run successfully.
+10.23 │ exit code: 1
+10.23 ╰─> See above for output.
+10.23 
+10.23 note: This error originates from a subprocess, and is likely not a problem with pip.
+10.37 
+10.37 [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+10.37 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:16
+
+--------------------
+
+  14 |     COPY custom_addons/ /mnt/extra-addons/
+
+  15 |     RUN pip install --no-cache-dir "cython<3" wheel
+
+  16 | >>> RUN pip install --no-cache-dir -r requirements.txt
+
+  17 |     
+
+  18 |     EXPOSE 8069
+
+--------------------
+
+failed to solve: process "/bin/sh -c pip install --no-cache-dir -r requirements.txt" did not complete successfully: exit code: 1
+
